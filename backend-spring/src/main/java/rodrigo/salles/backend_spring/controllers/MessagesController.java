@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MessagesController {
-        @GetMapping("/messages")
+    @GetMapping("/messages")
     public ResponseEntity<List<String>> messages() {
         return ResponseEntity.ok(Arrays.asList("first", "second"));
     }
