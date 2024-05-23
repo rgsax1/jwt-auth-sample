@@ -2,9 +2,13 @@ import React from 'react'
 
 const WelcomeContent = () => {
   return (
-    <div>
-        <h1>Welcome</h1>
-        <p>Login to see protected content</p>
+    <div className="row justify-content-md-center">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1 className="display-4">Welcome</h1>
+          <p className='lead'>Login to see protected content.</p>
+        </div>
+      </div>
     </div>
   )
 }
