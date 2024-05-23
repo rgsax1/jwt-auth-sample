@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 const Header = props => {
   return (
     <div>
-        <header>
-            <img src={props.logoSrc} alt="logo"/>
-            <h1>{props.pageTitle}</h1>
+        <header className='App-header'>
+            <img src={props.logoSrc} className="App-logo" alt="logo"/>
+            <h1 className='App-title'>{props.pageTitle}</h1>
         </header>
     </div>
   )
