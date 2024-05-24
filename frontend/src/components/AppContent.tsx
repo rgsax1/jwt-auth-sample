@@ -1,4 +1,3 @@
-import React from 'react'
 import WelcomeContent from './WelcomeContent'
 
 const AppContent = () => {

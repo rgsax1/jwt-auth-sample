@@ -1,5 +1,3 @@
-import React from 'react'
-
 const WelcomeContent = () => {
   return (
     <div className="row justify-content-md-center">

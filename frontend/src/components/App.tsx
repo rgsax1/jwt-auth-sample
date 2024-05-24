@@ -1,5 +1,5 @@
 import './App.css'
-import logo from '../logo.svg'
+import logo from '../assets/react.svg'
 import Header from './Header'
 import AppContent from './AppContent';
 
