@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("*")
 @RequestMapping
+@CrossOrigin("http://localhost:4200")
 public class MessagesController {
     @GetMapping("/messages")
     public ResponseEntity<List<String>> messages() {
