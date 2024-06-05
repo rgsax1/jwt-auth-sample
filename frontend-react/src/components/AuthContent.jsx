@@ -1,29 +1,32 @@
-import React from 'react';
-import { request } from '../services/axios_helper.js'
+import React, { useState, useEffect } from 'react';
+import { request } from '../services/axios_helper.js';
 
-export default class AuthContent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data : []
-        }
-    }
+const AuthContent = () => {
+    const [data, setData] = useState([]);
 
-    componentDidMount() {
+    useEffect(() => {
         request(
             "GET",
             "/messages",
             {}
         ).then((response) => {
-            this.setState({data:request.data})
-        })
-    }
+            setData(response.data);
+        });
+    }, []);
 
-    render() {
-        return (
-            <div>
-                {this.state.data && this.state.data.map((line) => <p>{line}</p>)}
+    return (
+        <div className="row justify-content-md-center">
+            <div className="col-4">
+                <div className="card">
+                    <h5 className="card-title">Backend response</h5>
+                    <p className="card-text">Content:</p>
+                    <ul>
+                        {data && data.map((line) => <li key={line}>{line}</li>)}
+                    </ul>
+                </div>
             </div>
-        )
-    }
-}
+        </div>
+    );
+};
+
+export default AuthContent;
